@@ -1,0 +1,96 @@
+<!Doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Random Quotes Generator - Avrajyoti</title>
+    <!--    CSS STYLESHEET -->
+    <link media="all" href="css/style.css" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Random Quotes Generator </h1>
+
+
+        <section>
+            <div class="container container2">
+                <div class="Outer">
+                    <div class="inner">
+                        <p id="quotes">Mix up a little more shadow color here, then we can put us a little shadow right in there. See how you can move things around? You have unlimited power on this canvas -- can literally, literally move mountains</p>
+                        <h4>- <span id="author">Bob Ross</span></h4>
+                    </div>
+                    <div class="row text-center">
+                        <button class="btn-submit" id="generate">Generate</button></div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <div class="footer">
+            <p>Designed By Avrajyoti Sarkar</p>
+        </div>
+
+    </div>
+    <script>
+        (function() {
+            const quotes = [{
+                    quote: "If you want to be average, do what others do. If you want to be awesome, do what no one does.",
+                    author: "Alexander Den Heijer"
+                },
+                {
+                    quote: "Positive thinking will let you use the ability which you have, and that is awesome",
+                    author: "Zig Ziglar"
+                },
+                {
+                    quote: "I am thankful for all of those who said NO to me. It’s because of them I’m doing it myself.",
+                    author: "Albert Einstein "
+                },
+                {
+                    quote: "The best thing about being who you really are is that you simply cannot fail! Be you, be awesome and live awesomely.",
+                    author: "David Thoreau"
+                },
+                {
+                    quote: "Life is like a landscape. You live in the midst of it but can describe it only from the vantage point of distance. ",
+                    author: "Charles Lindbergh"
+                },
+                {
+                    quote: "A critic is someone who never actually goes to the battle, yet who afterwards comes out shooting the wounded.",
+                    author: " Tyne Daly"
+                },
+                {
+                    quote: "We don't make mistakes, just happy little accidents.",
+                    author: "Bob Ross"
+                }
+            ];
+
+            const btn = document.getElementById("generate");
+
+            btn.addEventListener("click", function() {
+                let random = Math.floor(Math.random() * quotes.length);
+                console.log(random);
+
+                document.getElementById("quotes").textContent = quotes[random].quote;
+                document.getElementById("author").textContent = quotes[random].author;
+            });
+        })();
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
